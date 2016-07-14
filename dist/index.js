@@ -144,6 +144,7 @@ exports.default = function () {
 
                 outputPath = compiler.options.devServer.outputPath;
             }
+            outputPath = _path2.default.resolve(process.cwd(), outputPath);
 
             log('compiler.options.devServer.outputPath is "' + _chalk2.default.cyan(outputPath) + '".');
 
