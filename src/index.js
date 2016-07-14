@@ -114,6 +114,7 @@ export default (userOptions: UserOptionsType = {}): Object => {
             log('stats.compilation.errors.length is "' + chalk.cyan(stats.compilation.errors.length) + '".');
 
             _.forEach(stats.compilation.assets, (asset, assetPath) => {
+                assetPath = assetPath.replace(new RegExp('^\/?' + outputPath.slice(1) + '\/?'), '');
                 const outputFilePath = path.join(outputPath, assetPath);
                 const relativeOutputPath = path.relative(process.cwd(), outputFilePath);
                 const targetDefinition = 'asset: ' + chalk.cyan('./' + assetPath) + '; destination: ' + chalk.cyan('./' + relativeOutputPath);
