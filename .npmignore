@@ -1,6 +1,13 @@
-src
-sandbox
-tests
+node_modules
 coverage
-.*
 *.log
+.*
+!.gitignore
+!.npmignore
+!.babelrc
+!.travis.yml
+
+
+# npmignore - content above this line is automatically generated and modifications may be omitted
+# see npmjs.com/npmignore for more details.
+src

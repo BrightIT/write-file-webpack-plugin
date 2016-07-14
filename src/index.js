@@ -94,11 +94,12 @@ export default (userOptions: UserOptionsType = {}): Object => {
 
                 outputPath = compiler.options.devServer.outputPath;
             }
+            outputPath = path.resolve(process.cwd(), outputPath);
 
             log('compiler.options.devServer.outputPath is "' + chalk.cyan(outputPath) + '".');
 
             setupStatus = true;
-
+            
             return setupStatus;
         };
 
